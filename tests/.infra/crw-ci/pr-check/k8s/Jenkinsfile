@@ -94,7 +94,7 @@ pipeline {
                                         --no-check-certificate \
                                         -O ${WORKSPACE}/chectl-linux-x64.tar.gz
                                         
-                                    tar -xvzf ${WORKSPACE}/chectl-linux-x64.tar.gz
+                                    tar -xzf ${WORKSPACE}/chectl-linux-x64.tar.gz
                                     ls ${WORKSPACE}/chectl
                                 """
                             }
@@ -222,7 +222,7 @@ pipeline {
                         --installer=operator \\
                         --listr-renderer=verbose \\
                         --platform=minikube \\
-                        --che-operator-cr-yaml=$CUSTOM_RESOURCE_FILE_PATH
+                        --che-operator-cr-yaml=$CUSTOM_RESOURCE_FILE_PATH \\
                         --che-operator-image=quay.io/dfestal/che-operator:fix-devfile-registry-public-url
                     """
 

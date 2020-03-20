@@ -258,7 +258,7 @@ function installCheCtl() {
     --no-check-certificate \
     -O chectl-linux-x64.tar.gz
     
-  tar -xvzf chectl-linux-x64.tar.gz
+  tar -xzf chectl-linux-x64.tar.gz
   echo "======== chectl has been installed successfully ========"
 }
 
